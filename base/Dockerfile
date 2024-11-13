@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM artifactory.raiffeisen.ru/datalake-docker/ubuntu:latest
 
 RUN apt-get update
 
@@ -28,7 +28,7 @@ ARG PYTHON_VERSION=3.11.6
 
 # compile python from source - avoid unsupported library problems
 RUN cd /usr/src && \
-    wget https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz && \
+    wget --no-check-certificate https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz && \
     tar xzf Python-$PYTHON_VERSION.tgz && \
     cd Python-$PYTHON_VERSION && \
     ./configure --enable-optimizations && \

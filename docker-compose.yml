@@ -1,6 +1,6 @@
 services:
   metastore:
-    image: postgres:11
+    image: artifactory.raiffeisen.ru/datalake-docker/de-community-hadoop-hive-spark/postgres:11
     hostname: metastore
     environment:
       POSTGRES_PASSWORD: jupyter

@@ -1,5 +1,5 @@
 FROM hadoop-hive-spark-base:latest AS base
-FROM jupyter/minimal-notebook:python-3.11.6
+FROM artifactory.raiffeisen.ru/datalake-docker/jupyter/minimal-notebook:python-3.11.6
 
 USER root
 
@@ -54,6 +54,7 @@ ENV PATH=$HIVE_HOME/sbin:$HIVE_HOME/bin:$PATH
 
 RUN pip install pip && \
     pip install --no-cache-dir \
+    pyspark==3.4.4 \
     pandas \
     findspark
 
