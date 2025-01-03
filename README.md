@@ -165,3 +165,4 @@ bash stop-cluster.sh
 ## О проекте
 
 Собрано на основе [проекта в GitHub](https://github.com/chihweiwork/hadoop-hive-spark-jupyter-docker).
+# otus-spark
